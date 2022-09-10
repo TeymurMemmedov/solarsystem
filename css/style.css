@@ -1,0 +1,89 @@
+img{
+    width: 100%;
+}
+
+
+#sun-orbit{
+
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    border: 3px dashed blue;
+    margin: auto;
+    margin-top: 100px;
+    position: relative;
+}
+
+#sun-self{
+    position: absolute;
+    top: 150px;
+    left: 150px;
+    width: 100px;
+    height: 100px;
+    animation: sun-rotate 5s linear infinite;
+}
+
+
+#earth-orbit{
+    width: 100px;
+    height: 100px;
+    border: 2px dashed red;
+    border-radius: 50%;
+    position: absolute;
+    top: 150px;
+    left:150px;
+    animation: earth-move 5s linear infinite;
+}
+
+#moon{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 35px;
+    left: 35px;
+    border-radius: 50%;
+    animation: moon-move 2s linear infinite;
+    
+}
+
+#earth-self{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top:30px;
+    left: 30px;
+    animation: earth-rotate 5s linear infinite;
+}
+/* @keyframes myOrbit {
+    from { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+} */
+
+@keyframes earth-move {
+    0%{transform: rotate(0deg) translate(200px) rotate(0deg);}
+        
+    
+    100%{transform:  rotate(360deg) translateX(200px) rotate(-360deg);}
+}
+
+@keyframes moon-move {
+    0%{transform: rotate(0deg) translate(50px) rotate(0deg);}
+        
+    
+    100%{transform:  rotate(360deg) translateX(50px) rotate(-360deg);}
+}
+
+@keyframes sun-rotate{
+    0%{transform: rotate(0deg);}
+    50%{transform: rotate(180deg);}
+    100%{transform: rotate(360deg);}
+}
+
+@keyframes earth-rotate {
+
+    0%{transform: rotate(0deg);}
+    50%{transform: rotate(180deg);}
+    100%{transform: rotate(360deg);}
+}
+
+
